@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/72229aeae9.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Kofta</title>
+</head>
+<body>
+    <div class="nav-menu" id="dropdown">
+        <a href="index.html">Kofta</a>
+        <a href="index.html" class="link">Home</a>
+        <a href="menu.html" class="link">Menu</a>
+        <a href="about.html" class="link">About Us</a>
+        <a href="reservation.html" class="link current">Reservation</a>
+        <a href="javascript:void(0);" class="icon" onclick="dropdown()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+
+    <div id="reserve-content">
+        <h1>Reserve your table and save your spot</h1>
+        
+
+        <div id="reserve-content-container">
+            <div id="calendar-container" onmouseenter="openCalendar()" onmouseleave="closeCalendar()">
+                <i style="margin-right: 30px; padding-left: 15px;" class="far fa-calendar-alt"></i><span id="date_txt"></span>
+                <input style="visibility: hidden;" type="text" value="hello" name="date" id="date">
+                <div id="calendar">
+
+                    <div id="Jan">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>January,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Jan 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="Jan 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Jan 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Jan 4, 2020" onclick="takevalue()">4</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jan 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Jan 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Jan 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Jan 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="Jan 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Jan 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Jan 11, 2020" onclick="takevalue()">11</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jan 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Jan 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Jan 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Jan 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="Jan 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Jan 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Jan 18, 2020" onclick="takevalue()">18</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jan 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Jan 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Jan 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Jan 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="Jan 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Jan 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Jan 25, 2020" onclick="takevalue()">25</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jan 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Jan 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Jan 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Jan 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="Jan 30, 2020" onclick="takevalue()">30</td>
+                                    <td title="Jan 31, 2020" onclick="takevalue()">31</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Feb">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;" ><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>Febuary,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Feb 1, 2020" onclick="takevalue()">1</td>
+                                </tr>
+                                <tr>
+                                    <td title="Feb 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Feb 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Feb 4, 2020" onclick="takevalue()">4</td>
+                                    <td title="Feb 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Feb 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Feb 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Feb 8, 2020" onclick="takevalue()">8</td>
+                                </tr>
+                                <tr>
+                                    <td title="Feb 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Feb 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Feb 11, 2020" onclick="takevalue()">11</td>
+                                    <td title="Feb 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Feb 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Feb 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Feb 15, 2020" onclick="takevalue()">15</td>
+                                </tr>
+                                <tr>
+                                    <td title="Feb 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Feb 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Feb 18, 2020" onclick="takevalue()">18</td>
+                                    <td title="Feb 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Feb 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Feb 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Feb 22, 2020" onclick="takevalue()">22</td>
+                                </tr>
+                                <tr>
+                                    <td title="Feb 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Feb 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Feb 25, 2020" onclick="takevalue()">25</td>
+                                    <td title="Feb 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Feb 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Feb 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Feb 29, 2020" onclick="takevalue()">29</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Mar">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>March,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td title="Mar 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="Mar 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Mar 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Mar 4, 2020" onclick="takevalue()">4</td>
+                                    <td title="Mar 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Mar 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Mar 7, 2020" onclick="takevalue()">7</td>
+                                </tr>
+                                <tr>
+                                    <td title="Mar 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="Mar 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Mar 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Mar 11, 2020" onclick="takevalue()">11</td>
+                                    <td title="Mar 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Mar 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Mar 14, 2020" onclick="takevalue()">14</td>
+                                </tr>
+                                <tr>
+                                    <td title="Mar 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="Mar 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Mar 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Mar 18, 2020" onclick="takevalue()">18</td>
+                                    <td title="Mar 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Mar 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Mar 21, 2020" onclick="takevalue()">21</td>
+                                </tr>
+                                <tr>
+                                    <td title="Mar 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="Mar 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Mar 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Mar 25, 2020" onclick="takevalue()">25</td>
+                                    <td title="Mar 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Mar 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Mar 28, 2020" onclick="takevalue()">28</td>
+                                </tr>
+                                <tr>
+                                    <td title="Mar 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="Mar 30, 2020" onclick="takevalue()">30</td>
+                                    <td title="Mar 31, 2020" onclick="takevalue()">31</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Apr">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>April,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Apr 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="Apr 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Apr 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Apr 4, 2020" onclick="takevalue()">4</td>
+                                </tr>
+                                <tr>
+                                    <td title="Apr 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Apr 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Apr 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Apr 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="Apr 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Apr 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Apr 11, 2020" onclick="takevalue()">11</td>
+                                </tr>
+                                <tr>
+                                    <td title="Apr 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Apr 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Apr 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Apr 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="Apr 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Apr 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Apr 18, 2020" onclick="takevalue()">18</td>
+                                </tr>
+                                <tr>
+                                    <td title="Apr 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Apr 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Apr 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Apr 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="Apr 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Apr 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Apr 25, 2020" onclick="takevalue()">25</td>
+                                </tr>
+                                <tr>
+                                    <td title="Apr 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Apr 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Apr 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Apr 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="Apr 30, 2020" onclick="takevalue()">30</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="May">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>May,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="May 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="May 2, 2020" onclick="takevalue()">2</td>
+                                </tr>
+                                <tr>
+                                    <td title="May 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="May 4, 2020" onclick="takevalue()">4</td>
+                                    <td title="May 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="May 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="May 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="May 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="May 9, 2020" onclick="takevalue()">9</td>
+                                </tr>
+                                <tr>
+                                    <td title="May 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="May 11, 2020" onclick="takevalue()">11</td>
+                                    <td title="May 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="May 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="May 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="May 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="May 16, 2020" onclick="takevalue()">16</td>
+                                </tr>
+                                <tr>
+                                    <td title="May 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="May 18, 2020" onclick="takevalue()">18</td>
+                                    <td title="May 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="May 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="May 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="May 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="May 23, 2020" onclick="takevalue()">23</td>
+                                </tr>
+                                <tr>
+                                    <td title="May 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="May 25, 2020" onclick="takevalue()">25</td>
+                                    <td title="May 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="May 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="May 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="May 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="May 30, 2020" onclick="takevalue()">30</td>
+                                </tr>
+                                <tr>
+                                    <td title="May 31, 2020" onclick="takevalue()">31</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Jun">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>June,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Jun 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="Jun 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Jun 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Jun 4, 2020" onclick="takevalue()">4</td>
+                                    <td title="Jun 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Jun 6, 2020" onclick="takevalue()">6</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jun 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Jun 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="Jun 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Jun 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Jun 11, 2020" onclick="takevalue()">11</td>
+                                    <td title="Jun 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Jun 13, 2020" onclick="takevalue()">13</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jun 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Jun 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="Jun 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Jun 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Jun 18, 2020" onclick="takevalue()">18</td>
+                                    <td title="Jun 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Jun 20, 2020" onclick="takevalue()">20</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jun 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Jun 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="Jun 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Jun 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Jun 25, 2020" onclick="takevalue()">25</td>
+                                    <td title="Jun 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Jun 27, 2020" onclick="takevalue()">27</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jun 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Jun 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="Jun 30, 2020" onclick="takevalue()">30</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Jul">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>July,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Jul 1, 2020" onclick="takevalue()">1</td>
+                                    <td title="Jul 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Jul 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Jul 4, 2020" onclick="takevalue()">4</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jul 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Jul 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Jul 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Jul 8, 2020" onclick="takevalue()">8</td>
+                                    <td title="Jul 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Jul 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Jul 11, 2020" onclick="takevalue()">11</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jul 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Jul 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Jul 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Jul 15, 2020" onclick="takevalue()">15</td>
+                                    <td title="Jul 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Jul 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Jul 18, 2020" onclick="takevalue()">18</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jul 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Jul 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Jul 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Jul 22, 2020" onclick="takevalue()">22</td>
+                                    <td title="Jul 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Jul 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Jul 25, 2020" onclick="takevalue()">25</td>
+                                </tr>
+                                <tr>
+                                    <td title="Jul 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Jul 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Jul 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Jul 29, 2020" onclick="takevalue()">29</td>
+                                    <td title="Jul 30, 2020" onclick="takevalue()">30</td>
+                                    <td title="Jul 31, 2020" onclick="takevalue()">31</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Aug">
+                        <table>
+                            <thead>
+                                <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>August,2020</h4>
+                                <tr>
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                            </thead>
+    
+                            <tbody>
+                                <tr>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td title="Aug 1, 2020" onclick="takevalue()">1</td>
+                                </tr>
+                                <tr>
+                                    <td title="Aug 2, 2020" onclick="takevalue()">2</td>
+                                    <td title="Aug 3, 2020" onclick="takevalue()">3</td>
+                                    <td title="Aug 4, 2020" onclick="takevalue()">4</td>
+                                    <td title="Aug 5, 2020" onclick="takevalue()">5</td>
+                                    <td title="Aug 6, 2020" onclick="takevalue()">6</td>
+                                    <td title="Aug 7, 2020" onclick="takevalue()">7</td>
+                                    <td title="Aug 8, 2020" onclick="takevalue()">8</td>
+                                </tr>
+                                <tr>
+                                    <td title="Aug 9, 2020" onclick="takevalue()">9</td>
+                                    <td title="Aug 10, 2020" onclick="takevalue()">10</td>
+                                    <td title="Aug 11, 2020" onclick="takevalue()">11</td>
+                                    <td title="Aug 12, 2020" onclick="takevalue()">12</td>
+                                    <td title="Aug 13, 2020" onclick="takevalue()">13</td>
+                                    <td title="Aug 14, 2020" onclick="takevalue()">14</td>
+                                    <td title="Aug 15, 2020" onclick="takevalue()">15</td>
+                                </tr>
+                                <tr>
+                                    <td title="Aug 16, 2020" onclick="takevalue()">16</td>
+                                    <td title="Aug 17, 2020" onclick="takevalue()">17</td>
+                                    <td title="Aug 18, 2020" onclick="takevalue()">18</td>
+                                    <td title="Aug 19, 2020" onclick="takevalue()">19</td>
+                                    <td title="Aug 20, 2020" onclick="takevalue()">20</td>
+                                    <td title="Aug 21, 2020" onclick="takevalue()">21</td>
+                                    <td title="Aug 22, 2020" onclick="takevalue()">22</td>
+                                </tr>
+                                <tr>
+                                    <td title="Aug 23, 2020" onclick="takevalue()">23</td>
+                                    <td title="Aug 24, 2020" onclick="takevalue()">24</td>
+                                    <td title="Aug 25, 2020" onclick="takevalue()">25</td>
+                                    <td title="Aug 26, 2020" onclick="takevalue()">26</td>
+                                    <td title="Aug 27, 2020" onclick="takevalue()">27</td>
+                                    <td title="Aug 28, 2020" onclick="takevalue()">28</td>
+                                    <td title="Aug 29, 2020" onclick="takevalue()">29</td>
+                                </tr>
+                                <tr>
+                                    <td title="Aug 30, 2020" onclick="takevalue()">30</td>
+                                    <td title="Aug 31, 2020" onclick="takevalue()">31</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                    <td class="empty">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div style="visibility: hidden;" id="Sept">
+                    <table>
+                        <thead>
+                            <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>September,2020</h4>
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td title="Sept 1, 2020" onclick="takevalue()">1</td>
+                                <td title="Sept 2, 2020" onclick="takevalue()">2</td>
+                                <td title="Sept 3, 2020" onclick="takevalue()">3</td>
+                                <td title="Sept 4, 2020" onclick="takevalue()">4</td>
+                                <td title="Sept 5, 2020" onclick="takevalue()">5</td>
+                            </tr>
+                            <tr>
+                                <td title="Sept 6, 2020" onclick="takevalue()">6</td>
+                                <td title="Sept 7, 2020" onclick="takevalue()">7</td>
+                                <td title="Sept 8, 2020" onclick="takevalue()">8</td>
+                                <td title="Sept 9, 2020" onclick="takevalue()">9</td>
+                                <td title="Sept 10, 2020" onclick="takevalue()">10</td>
+                                <td title="Sept 11, 2020" onclick="takevalue()">11</td>
+                                <td title="Sept 12, 2020" onclick="takevalue()">12</td>
+                            </tr>
+                            <tr>
+                                <td title="Sept 13, 2020" onclick="takevalue()">13</td>
+                                <td title="Sept 14, 2020" onclick="takevalue()">14</td>
+                                <td title="Sept 15, 2020" onclick="takevalue()">15</td>
+                                <td title="Sept 16, 2020" onclick="takevalue()">16</td>
+                                <td title="Sept 17, 2020" onclick="takevalue()">17</td>
+                                <td title="Sept 18, 2020" onclick="takevalue()">18</td>
+                                <td title="Sept 19, 2020" onclick="takevalue()">19</td>
+                            </tr>
+                            <tr>
+                                <td title="Sept 20, 2020" onclick="takevalue()">20</td>
+                                <td title="Sept 21, 2020" onclick="takevalue()">21</td>
+                                <td title="Sept 22, 2020" onclick="takevalue()">22</td>
+                                <td title="Sept 23, 2020" onclick="takevalue()">23</td>
+                                <td title="Sept 24, 2020" onclick="takevalue()">24</td>
+                                <td title="Sept 25, 2020" onclick="takevalue()">25</td>
+                                <td title="Sept 26, 2020" onclick="takevalue()">26</td>
+                            </tr>
+                            <tr>
+                                <td title="Sept 27, 2020" onclick="takevalue()">27</td>
+                                <td title="Sept 28, 2020" onclick="takevalue()">28</td>
+                                <td title="Sept 29, 2020" onclick="takevalue()">29</td>
+                                <td title="Sept 30, 2020" onclick="takevalue()">30</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div style="visibility: hidden;" id="Oct">
+                    <table>
+                        <thead>
+                            <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>October,2020</h4>
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td title="Oct 1, 2020" onclick="takevalue()">1</td>
+                                <td title="Oct 2, 2020" onclick="takevalue()">2</td>
+                                <td title="Oct 3, 2020" onclick="takevalue()">3</td>
+                            </tr>
+                            <tr>
+                                <td title="Oct 4, 2020" onclick="takevalue()">4</td>
+                                <td title="Oct 5, 2020" onclick="takevalue()">5</td>
+                                <td title="Oct 6, 2020" onclick="takevalue()">6</td>
+                                <td title="Oct 7, 2020" onclick="takevalue()">7</td>
+                                <td title="Oct 8, 2020" onclick="takevalue()">8</td>
+                                <td title="Oct 9, 2020" onclick="takevalue()">9</td>
+                                <td title="Oct 10, 2020" onclick="takevalue()">10</td>
+                            </tr>
+                            <tr>
+                                <td title="Oct 11, 2020" onclick="takevalue()">11</td>
+                                <td title="Oct 12, 2020" onclick="takevalue()">12</td>
+                                <td title="Oct 13, 2020" onclick="takevalue()">13</td>
+                                <td title="Oct 14, 2020" onclick="takevalue()">14</td>
+                                <td title="Oct 15, 2020" onclick="takevalue()">15</td>
+                                <td title="Oct 16, 2020" onclick="takevalue()">16</td>
+                                <td title="Oct 17, 2020" onclick="takevalue()">17</td>
+                            </tr>
+                            <tr>
+                                <td title="Oct 18, 2020" onclick="takevalue()">18</td>
+                                <td title="Oct 19, 2020" onclick="takevalue()">19</td>
+                                <td title="Oct 20, 2020" onclick="takevalue()">20</td>
+                                <td title="Oct 21, 2020" onclick="takevalue()">21</td>
+                                <td title="Oct 22, 2020" onclick="takevalue()">22</td>
+                                <td title="Oct 23, 2020" onclick="takevalue()">23</td>
+                                <td title="Oct 24, 2020" onclick="takevalue()">24</td>
+                            </tr>
+                            <tr>
+                                <td title="Oct 25, 2020" onclick="takevalue()">25</td>
+                                <td title="Oct 26, 2020" onclick="takevalue()">26</td>
+                                <td title="Oct 27, 2020" onclick="takevalue()">27</td>
+                                <td title="Oct 28, 2020" onclick="takevalue()">28</td>
+                                <td title="Oct 29, 2020" onclick="takevalue()">29</td>
+                                <td title="Oct 30, 2020" onclick="takevalue()">30</td>
+                                <td title="Oct 31, 2020" onclick="takevalue()">31</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div style="visibility: hidden;" id="Nov">
+                    <table>
+                        <thead>
+                            <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>November,2020</h4>
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td title="Nov 1, 2020" onclick="takevalue()">1</td>
+                                <td title="Nov 2, 2020" onclick="takevalue()">2</td>
+                                <td title="Nov 3, 2020" onclick="takevalue()">3</td>
+                                <td title="Nov 4, 2020" onclick="takevalue()">4</td>
+                                <td title="Nov 5, 2020" onclick="takevalue()">5</td>
+                                <td title="Nov 6, 2020" onclick="takevalue()">6</td>
+                                <td title="Nov 7, 2020" onclick="takevalue()">7</td>
+                            </tr>
+                            <tr>
+                                <td title="Nov 8, 2020" onclick="takevalue()">8</td>
+                                <td title="Nov 9, 2020" onclick="takevalue()">9</td>
+                                <td title="Nov 10, 2020" onclick="takevalue()">10</td>
+                                <td title="Nov 11, 2020" onclick="takevalue()">11</td>
+                                <td title="Nov 12, 2020" onclick="takevalue()">12</td>
+                                <td title="Nov 13, 2020" onclick="takevalue()">13</td>
+                                <td title="Nov 14, 2020" onclick="takevalue()">14</td>
+                            </tr>
+                            <tr>
+                                <td title="Nov 15, 2020" onclick="takevalue()">15</td>
+                                <td title="Nov 16, 2020" onclick="takevalue()">16</td>
+                                <td title="Nov 17, 2020" onclick="takevalue()">17</td>
+                                <td title="Nov 18, 2020" onclick="takevalue()">18</td>
+                                <td title="Nov 19, 2020" onclick="takevalue()">19</td>
+                                <td title="Nov 20, 2020" onclick="takevalue()">20</td>
+                                <td title="Nov 21, 2020" onclick="takevalue()">21</td>
+                            </tr>
+                            <tr>
+                                <td title="Nov 22, 2020" onclick="takevalue()">22</td>
+                                <td title="Nov 23, 2020" onclick="takevalue()">23</td>
+                                <td title="Nov 24, 2020" onclick="takevalue()">24</td>
+                                <td title="Nov 25, 2020" onclick="takevalue()">25</td>
+                                <td title="Nov 26, 2020" onclick="takevalue()">26</td>
+                                <td title="Nov 27, 2020" onclick="takevalue()">27</td>
+                                <td title="Nov 28, 2020" onclick="takevalue()">28</td>
+                            </tr>
+                            <tr>
+                                <td title="Nov 29, 2020" onclick="takevalue()">29</td>
+                                <td title="Nov 30, 2020" onclick="takevalue()">30</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                    <div style="visibility: hidden;" id="Dec">
+                    <table>
+                        <thead>
+                            <h4 style="text-align: center;"><span id="calendar-right-arrow" class="cursor" onclick="forwardCalendar()">&gt;</span>December,2020</h4>
+                            <tr>
+                                <th>SUN</th>
+                                <th>MON</th>
+                                <th>TUE</th>
+                                <th>WED</th>
+                                <th>THU</th>
+                                <th>FRI</th>
+                                <th>SAT</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                                <td title="Dec 1, 2020" onclick="takevalue()">1</td>
+                                <td title="Dec 2, 2020" onclick="takevalue()">2</td>
+                                <td title="Dec 3, 2020" onclick="takevalue()">3</td>
+                                <td title="Dec 4, 2020" onclick="takevalue()">4</td>
+                                <td title="Dec 5, 2020" onclick="takevalue()">5</td>
+                            </tr>
+                            <tr>
+                                <td title="Dec 6, 2020" onclick="takevalue()">6</td>
+                                <td title="Dec 7, 2020" onclick="takevalue()">7</td>
+                                <td title="Dec 8, 2020" onclick="takevalue()">8</td>
+                                <td title="Dec 9, 2020" onclick="takevalue()">9</td>
+                                <td title="Dec 10, 2020" onclick="takevalue()">10</td>
+                                <td title="Dec 11, 2020" onclick="takevalue()">11</td>
+                                <td title="Dec 12, 2020" onclick="takevalue()">12</td>
+                            </tr>
+                            <tr>
+                                <td title="Dec 13, 2020" onclick="takevalue()">13</td>
+                                <td title="Dec 14, 2020" onclick="takevalue()">14</td>
+                                <td title="Dec 15, 2020" onclick="takevalue()">15</td>
+                                <td title="Dec 16, 2020" onclick="takevalue()">16</td>
+                                <td title="Dec 17, 2020" onclick="takevalue()">17</td>
+                                <td title="Dec 18, 2020" onclick="takevalue()">18</td>
+                                <td title="Dec 19, 2020" onclick="takevalue()">19</td>
+                            </tr>
+                            <tr>
+                                <td title="Dec 20, 2020" onclick="takevalue()">20</td>
+                                <td title="Dec 21, 2020" onclick="takevalue()">21</td>
+                                <td title="Dec 22, 2020" onclick="takevalue()">22</td>
+                                <td title="Dec 23, 2020" onclick="takevalue()">23</td>
+                                <td title="Dec 24, 2020" onclick="takevalue()">24</td>
+                                <td title="Dec 25, 2020" onclick="takevalue()">25</td>
+                                <td title="Dec 26, 2020" onclick="takevalue()">26</td>
+                            </tr>
+                            <tr>
+                                <td title="Dec 27, 2020" onclick="takevalue()">27</td>
+                                <td title="Dec 28, 2020" onclick="takevalue()">28</td>
+                                <td title="Dec 29, 2020" onclick="takevalue()">29</td>
+                                <td title="Dec 30, 2020" onclick="takevalue()">30</td>
+                                <td title="Dec 31, 2020" onclick="takevalue()">31</td>
+                                <td class="empty">&nbsp;</td>
+                                <td class="empty">&nbsp;</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    </div>
+
+                </div>
+            </div>
+            
+        <select name="people" id="people"> 
+            <option value="" disabled selected hidden>Choose # of guests</option>
+            <option value="1">&nbsp;&nbsp;1 person</option>
+            <option value="2">&nbsp;&nbsp;2 people</option>
+            <option value="3">&nbsp;&nbsp;3 people</option>
+            <option value="4">&nbsp;&nbsp;4 people</option>
+            <option value="5">&nbsp;&nbsp;5 people</option>
+            <option value="6">&nbsp;&nbsp;6 people</option>
+            <option value="7">&nbsp;&nbsp;7 people</option>
+            <option value="7+">&nbsp;&nbsp;7+ people</option>
+        </select>
+        <select name="time" id="time">
+            <option value="" disabled selected hidden>Choose a Time</option>
+            <option value="7:30">&nbsp;&nbsp;7:30 PM</option>
+            <option value="7:45">&nbsp;&nbsp;7:45 PM</option>
+            <option value="8:00">&nbsp;&nbsp;8:00 PM</option>
+            <option value="8:15">&nbsp;&nbsp;8:15 PM</option>
+            <option value="8:30">&nbsp;&nbsp;8:30 PM</option>
+            <option value="8:45">&nbsp;&nbsp;8:45 PM</option>
+            <option value="9:00">&nbsp;&nbsp;9:00 PM</option>
+            <option value="9:15">&nbsp;&nbsp;9:15 PM</option>
+            <option value="9:30">&nbsp;&nbsp;9:30 PM</option>
+            <option value="9:45">&nbsp;&nbsp;9:45 PM</option>
+            <option value="10:00">&nbsp;&nbsp;10:00 PM</option>
+            <option value="10:15">&nbsp;&nbsp;10:15 PM</option>
+            <option value="10:30">&nbsp;&nbsp;10:30 PM</option>
+            <option value="10:45">&nbsp;&nbsp;10:45 PM</option>
+            <option value="11:00">&nbsp;&nbsp;11:00 PM</option>
+            <option value="11:30">&nbsp;&nbsp;11:30 PM</option>
+
+
+        </select>
+        <p id="find-table">Find a Table</p>
+        </div>
+
+        <section id="personal-section" class="submit-section">
+                <div>
+                  <input type="text" placeholder="Name" name="name">
+                </div>
+              
+                <div>
+                  <input type="text" placeholder="Email" name="email">
+                </div>
+              
+                <div>
+                  <input type="number" placeholder="Number" name="phoneNumber">
+                </div>
+              
+                <button type="submit" onclick="window.location.href = 'thanks.html'">Reserve</button>
+        </section>
+    </div>
+
+    
+    
+    <footer>
+        <p>Copyright &copy; 2020 Kofta - All Rights Reserved.</p>
+
+        <p>Developed By Karabet Jazmahji</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+            crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+
+    
+    
+</body>
+</html>

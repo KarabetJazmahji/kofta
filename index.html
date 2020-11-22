@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/72229aeae9.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script
+       src="https://code.jquery.com/jquery-3.4.1.js"
+       integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+       crossorigin="anonymous"></script>
+    <title>Kofta</title>
+</head>
+<body>
+    <div id="container">
+        <div id="spinner">
+            <i class="fa fa-spinner fa-spin" style="font-size:24px"></i>
+        </div>
+    </div>
+
+
+
+    <div class="nav-menu" id="dropdown">
+        <a href="#">Kofta</a>
+        <a href="#" class="link current">Home</a>
+        <a href="menu.html" class="link">Menu</a>
+        <a href="about.html" class="link">About Us</a>
+        <a href="reservation.html" class="link">Reservation</a>
+        <a href="javascript:void(0);" class="link icon" onclick="dropdown()">
+            <i class="fa fa-bars"></i>
+          </a>
+    </div>
+
+    <div id="main-content">
+        <h1>The Best Mediterranean Cuisine </h1>
+        <a href="#images-container" class="link-btn explore">EXPLORE</a>
+    </div>
+
+
+    <h2 class="header">Gallery</h2>
+    <hr class="header-line">
+    <div id="images-container">
+        <div class="column">
+            <img src="./images/baklava.jpg" alt="baklava" class="cursor" onclick="openBox()">
+            <img src="./images/view.jpg" alt="view" class="cursor" onclick="openBox()" >
+            <img src="./images/shewarma.jpg" alt="shewarma" class="cursor" onclick="openBox()">
+        </div>
+        <div class="column">
+            <img src="./images/kebab.jpg" alt="kebab" class="cursor" onclick="openBox()">
+            <img src="./images/hummus.jpg" alt="hummus" class="cursor" onclick="openBox()">
+            <img src="./images/lentil.jpg" alt="lentil" class="cursor" onclick="openBox()">
+        </div>
+        <div class="column">
+            <img src="./images/worker.jpeg" alt="worker" class="cursor" onclick="openBox()">
+            <img src="./images/dolma.jpg" alt="dolma" class="cursor" onclick="openBox()">
+            <img src="./images/falafel.jpg" alt="falafel" class="cursor" onclick="openBox()">
+        </div>
+    </div>
+
+    <div id="box">
+        <span id="close-cursor" class="cursor" onclick="closeBox()">&times;</span>
+        <span id="right-arrow" class="cursor" onclick="forward()">&gt;</span>
+        <span id="next-arrow" class="cursor" onclick="forward()">next</span>
+        <img id="img" src="" alt="display">
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2020 Kofta - All Rights Reserved.</p>
+
+        <p>Developed By Karabet Jazmahji</p>
+    </footer>
+
+    <script src="/app.js"></script>
+</body>
+</html>
