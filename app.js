@@ -95,9 +95,12 @@ $(document).ready(function(){
 function dropdown() {
   var x = document.getElementById("dropdown");
   if (x.className === "nav-menu") {
+    $(".icon i").addClass("fa fa-times");
     x.className += " responsive";
   } else {
     x.className = "nav-menu";
+    $(".icon i").removeClass("fa fa-times");
+    $(".icon i").addClass("fa fa-bars");
   }
 }
 

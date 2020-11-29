@@ -97,7 +97,24 @@ a{
 
 .nav-menu .icon{
     display: none;
-  }
+}
+
+.smallScreen .icon {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+
+.smallScreen a {
+    float: none;
+    display: block;
+    text-align: left;
+    color: white;
+}
+.smallScreen a:hover,.nav-list a.icon:hover{
+    border-color: transparent;
+}
 
 /* Showcase */
 .explore{
